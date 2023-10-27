@@ -24,7 +24,8 @@ export const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const body = document.querySelector('body');
-  isOpenMenu && body.classList.add('overflow-hidden', 'absolute', 'w-[100vw]', 'h-[100vh]');
+
+  body && isOpenMenu && body.classList.add('overflow-hidden', 'absolute', 'w-[100vw]', 'h-[100vh]');
 
   return (
     <nav className="bg-primary flex flex-col">
