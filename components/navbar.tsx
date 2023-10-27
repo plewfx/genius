@@ -26,13 +26,15 @@ export const Navbar = () => {
   useEffect(() => {
     const body = document.querySelector("body");
 
-    isOpenMenu &&
-      body.classList.add(
-        "overflow-hidden",
-        "absolute",
-        "w-[100vw]",
-        "h-[100vh]",
-      );
+    if (body) {
+        isOpenMenu &&
+          body.classList.add(
+            "overflow-hidden",
+            "absolute",
+            "w-[100vw]",
+            "h-[100vh]",
+          );
+    }
   }, [isOpenMenu]);
 
   return (
